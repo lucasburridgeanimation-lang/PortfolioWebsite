@@ -115,6 +115,10 @@ footer {
   color: white;
 }
 
+.page-top {
+  margin-top: 100px;
+}
+
 /* Mobile */
 @media (max-width: 768px) {
   .nav-links {
