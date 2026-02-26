@@ -5,11 +5,24 @@
   box-sizing: border-box;
 }
 
+/* Custom Font */
+@font-face {
+  font-family: "Moderniz";
+  src: url("fonts/Moderniz.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+  line-height: 1.8;
+  color: #000000;
   scroll-behavior: smooth;
+}
+/* headings */
+h1, h2, h3 {
+  font-family: "Moderniz", sans-serif;
+  letter-spacing: 1px;
 }
 
 /* Navbar */
@@ -70,7 +83,7 @@ body {
 }
 
 .accent {
-  color: #00d4ff;
+  color: #f04c8b;
 }
 
 .btn {
@@ -85,7 +98,7 @@ body {
 
 /* Sections */
 .section {
-  padding: 6rem 5%;
+  padding: 6rem 25%;
   text-align: center;
 }
 
@@ -142,4 +155,42 @@ footer {
   .menu-toggle {
     display: block;
   }
+    .logo-grid {
+    grid-template-columns: 1fr;
+  }
 }
+
+/* Logo Grid */
+.logo-grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-box {
+  aspect-ratio: 1 / 1;   /* Forces square */
+  background: #f4f4f400;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Hover effect */
+.logo-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
